@@ -1,19 +1,19 @@
 import pedro1 from "./pedro-1.png"
 import linkedinBanner from "./linkedin-banner.png" 
-import icon1 from "./skills-icon-1.png"
-import icon2 from "./skills-icon-2.png"
-import icon3 from "./skills-icon-3.png"
-import icon4 from "./skills-icon-4.png"
-import icon5 from "./skills-icon-5.png"
-import icon6 from "./skills-icon-6.png"
-import icon7 from "./skills-icon-7.png"
-import icon8 from "./skills-icon-8.png"
-import icon9 from "./skills-icon-9.png"
-import icon10 from "./skills-icon-10.png"
+// import icon1 from "./skills-icon-1.png"
+// import icon2 from "./skills-icon-2.png"
+// import icon3 from "./skills-icon-3.png"
+// import icon4 from "./skills-icon-4.png"
+// import icon5 from "./skills-icon-5.png"
+// import icon6 from "./skills-icon-6.png"
+// import icon7 from "./skills-icon-7.png"
+// import icon8 from "./skills-icon-8.png"
+// import icon9 from "./skills-icon-9.png"
+// import icon10 from "./skills-icon-10.png"
 import pedro2 from "./pedro-2.jpg"
-import educationLogo1 from "./education-1.png"
-import educationLogo2 from "./education-2.png"
-import educationLogo3 from "./education-3.png"
+// import educationLogo1 from "./education-1.png"
+// import educationLogo2 from "./education-2.png"
+// import educationLogo3 from "./education-3.png"
 import linkedInIcon from "./linkedin.png"
 import lineIcon from "./line.png"
 import whatsappIcon from "./whatsapp.png"
@@ -31,6 +31,7 @@ import linktreeImage7 from "./linktree-7.png"
 import linktreeImage8 from "./linktree-8.png"
 import linktreeImage9 from "./linktree-9.png"
 import linktreeImage10 from "./linktree-10.png"
+import linktreeImage11 from "./linktree-11.png"
 
 import hochdorfLogo from "./hochdorf.png"
 import hero1Logo from "./hero-1.png"
@@ -52,15 +53,15 @@ const section1 = () => {
     
     // Set the background image using the imported image
 bgContainer.style.backgroundImage = `url(${pedro1})`;
-// bgContainer.style.backgroundSize = "contain"; // Ensures the image covers the container
-bgContainer.style.backgroundPosition = "50px 0"; // Centers the image
 
-// if (window.innerWidth < 768) {
-//     bgContainer.style.backgroundSize = "cover"; // Ensures the image covers the container on mobile
-// } else {
-//     bgContainer.style.backgroundSize = "contain"; // Ensures the image covers the container on larger screens
-//     bgContainer.style.backgroundPosition = "right center"; // Centers the image
-// }
+
+if (window.innerWidth < 768) {
+    bgContainer.style.backgroundSize = "contain"; // Ensures the image covers the container
+bgContainer.style.backgroundPosition = "50px 0"; // Centers the image
+} else {
+    bgContainer.style.backgroundSize = "contain"; // Ensures the image covers the container on larger screens
+    bgContainer.style.backgroundPosition = "right center"; // Centers the image
+}
 bgContainer.style.backgroundRepeat = "no-repeat"; // Prevents the image from repeating
 // bgContainer.style.backgroundAttachment = "fixed"; // Ensures the image remains fixed in the viewport
 
@@ -75,17 +76,16 @@ textContainer.id = "text-container-1";
 const h1 = document.createElement("h1");
 h1.innerHTML = "Hey! I'm<br>Cliffton Kaewkarn";
 const p = document.createElement("p");
-p.innerHTML = "I'm a Web Developer<br><br>With strong fundamentals in HTML, CSS & Javascript.<br><br>I value clean code, user-friendly design, and efficient problem-solving.<br><br>Let's build something amazing together!";
+p.innerHTML = "I'm a Web Developer<br><br>With strong fundamentals in HTML, CSS & Javascript.<br><br>I'm currently building a Digital Nomads Thailand Calendar SPA with Vuejs + Superbase.<br><br>Open to new opportunities and collaborations.";
 const cta = document.createElement("a");
-cta.href = "https://www.linkedin.com/in/cliffton-kaewkarn-5ba6b1203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app";
+cta.href = "https://github.com/ck-js/";
 cta.target = "_blank";
 cta.className = "ctas";
-cta.innerHTML = "View My GitHub Profile";
+cta.innerHTML = "View My GitHub Code Repos";
 
 textContainer.appendChild(h1);
 textContainer.appendChild(p);
 textContainer.appendChild(cta);
-
 
 
 parentContainer.appendChild(textContainer);
@@ -99,7 +99,7 @@ const parentContainer = createParentContainer("parent-container-7");
 parentContainer.style.backgroundImage = `url(${linkedinBanner})`;
 parentContainer.style.backgroundSize = "contain"; 
 parentContainer.style.backgroundPosition = "center";
-parentContainer.style.backgroundRepeat = "no-repeat";
+parentContainer.style.backgroundRepeat = "repeat";
 
     
     return parentContainer;
@@ -871,7 +871,6 @@ const section6 = () => {
     const socialsContainer = createSocialsComponent(socialsArray);
     const linkTreeContainer = createLinkTrreeComponent(linkTreeArray);
 
-
     parentContainer.appendChild(img1);
     parentContainer.appendChild(h2);
     parentContainer.appendChild(p);
@@ -915,6 +914,7 @@ function createSocialsComponent(array) {
     return socialsContainer;
 }
 const linkTreeArray = [
+    {icon: linktreeImage11, link: "https://www.digitalnomadsthailand.org/", text: "Digital Nomads Thailand Calendar"},    
     {icon: linktreeImage1, link: "https://ck-js.github.io/Nutranation/", text: "German Fitness & Nutrition"},
     {icon: linktreeImage2, link: "https://ck-js.github.io/Pedro-G/", text: "Swiss FMCG Consulting & Advisory"},
     {icon: linktreeImage3, link: "https://ck-js.github.io/DKC-Biotech/", text: "UK / Thai Biotech & Health"},
@@ -922,9 +922,13 @@ const linkTreeArray = [
     {icon: linktreeImage5, link: "https://www.glowonflow.com", text: "Thailand Spa & Beauty"},
     {icon: linktreeImage6, link: "https://ck-js.github.io/Sendatradie-Task-Manager/", text: "React Task Manager App"},    
     {icon: linktreeImage7, link: "https://www.phanganist.com", text: "Thailand Travel & Events"},
-    {icon: linktreeImage8, link: "https://www.facebook.com/groups/thailanddigitalnomads/?ref=share_group_link", text: "The largest community of Digital Nomads in Thailand"},
     {icon: linktreeImage9, link: "https://www.instagram.com/koh.samui.thailand?igsh=MXV5NTZuZnJqMnFjcw==", text: "Grow & Promote your business on Koh Samui"},
     {icon: linktreeImage10, link: "https://www.instagram.com/koh.phangan.thailand?igsh=MW5tb2M5aGhneWhnNg==", text: "Grow & Promote your business on Koh Phangan"},
+    {icon: linktreeImage8, link: "https://www.facebook.com/groups/thailanddigitalnomads/?ref=share_group_link", text: "Join the largest community of Digital Nomads in Thailand"},
+    {icon: linktreeImage8, link: "https://chat.whatsapp.com/KE3CNy5IOjE9Vx0kKIGcA0", text: "Join the Digital Nomads Thailand WhatsApp Group"},
+    
+
+
 
 ]
 function createLinkTrreeComponent(array) {

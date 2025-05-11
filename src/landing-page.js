@@ -32,6 +32,7 @@ import linktreeImage8 from "./linktree-8.png"
 import linktreeImage9 from "./linktree-9.png"
 import linktreeImage10 from "./linktree-10.png"
 import linktreeImage11 from "./linktree-11.png"
+import linktreeImage12 from "./linktree-12.png"
 
 import hochdorfLogo from "./hochdorf.png"
 import hero1Logo from "./hero-1.png"
@@ -914,6 +915,7 @@ function createSocialsComponent(array) {
     return socialsContainer;
 }
 const linkTreeArray = [
+    {icon: linktreeImage12, link: "https://truevibe.app", text: "Singapore Dating & Matching Web App"},
     {icon: linktreeImage11, link: "https://www.digitalnomadsthailand.org/", text: "Digital Nomads Thailand Calendar"},    
     {icon: linktreeImage1, link: "https://ck-js.github.io/Nutranation/", text: "German Fitness & Nutrition"},
     {icon: linktreeImage2, link: "https://ck-js.github.io/Pedro-G/", text: "Swiss FMCG Consulting & Advisory"},
@@ -926,6 +928,11 @@ const linkTreeArray = [
     {icon: linktreeImage10, link: "https://www.instagram.com/koh.phangan.thailand?igsh=MW5tb2M5aGhneWhnNg==", text: "Grow & Promote your business on Koh Phangan"},
     {icon: linktreeImage8, link: "https://www.facebook.com/groups/thailanddigitalnomads/?ref=share_group_link", text: "Join the largest community of Digital Nomads in Thailand"},
     {icon: linktreeImage8, link: "https://chat.whatsapp.com/KE3CNy5IOjE9Vx0kKIGcA0", text: "Join the Digital Nomads Thailand WhatsApp Group"},
+
+    
+    
+    
+
     
 
 
@@ -968,7 +975,7 @@ parentContainer.setAttribute("aria-label", "Loading screen");
 
 const img = document.createElement("img");
 img.src = pgLogo;
-img.alt = "Pedro Garda logo loading screen with dark gray background";
+img.alt = "cliffton kaewkarn logo loading screen with dark gray background";
 
 parentContainer.appendChild(img);
 
